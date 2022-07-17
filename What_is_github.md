@@ -11,3 +11,5 @@
 - git : 분산 버전 관리 프로그램
 - github : git 기반의 저장소 서비스
 - 개인 컴퓨터에서 git을 활용해 수정하고, 이것을 github에 올리면 모두가 공유할 수 있다.
+### 1-4. local 저장소
+![local](https://user-images.githubusercontent.com/109258397/179398763-be92fc19-2576-4dc0-892e-8ffc54891daf.png)
