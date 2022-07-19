@@ -13,3 +13,21 @@
 - 개인 컴퓨터에서 git을 활용해 수정하고, 이것을 github에 올리면 모두가 공유할 수 있다.
 ### 1-4. local 저장소
 ![local](https://user-images.githubusercontent.com/109258397/179398979-35e483a1-cc55-4608-831e-7881ef72f457.png)
+### 1-5. 원격 저장소
+- 등록
+```bash
+git remote add origin <주소>
+#remote(원격 저장소)에 origin이라는 이름으로 <주소>라는 주소의 원격 저장소를 add(추가)한다
+```
+- 조회
+```bash
+$ git remote -v
+origin  <주소> (fetch)
+origin  <주소> (push)
+# add를 이용해 추가했던 원격 저장소의 이름과 주소를 출력
+```
+- 삭제
+```bash
+$ git remote rm origin
+$ git remote remove origin
+# remote(원격 저장소)와의 연결을 rm(remove, 삭제) 한다. 로컬과 원격 저장소의 연결을 끊는 것 삭제가 아님.
