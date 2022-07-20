@@ -31,3 +31,15 @@ origin  <주소> (push)
 $ git remote rm origin
 $ git remote remove origin
 # remote(원격 저장소)와의 연결을 rm(remove, 삭제) 한다. 로컬과 원격 저장소의 연결을 끊는 것 삭제가 아님.
+```
+### 1-6. .gitignore
+- .gitignore 작성 목록
+  1. 민감한 정보가 담긴 파일(전화번호, 계좌번호, API KEY, 비밀번호 등)
+  2. OS에 활용되는 파일
+  3. IDE(pycharm) 혹은 Texteditor(vscode)등에서 활용되는 파일
+  4. 개발 언어 혹은 프레임워크에서 사용되는 파일 (가상환경:venv/, __pycache__/)
+- 작성 시 주의 사항
+  1. 이름은 .gitignore
+  2. .git폴더와 동일한 위치에 생성.
+  3. 제외 하고 싶은 파일은 반드시 git add 전에 .gitigore에 작성.(git add를 먼저 하게되면 버전 관리 대상이 되어 이후에 .gitignore에 작성해도 무시되지 않고 계속 버전 관리 대상으로 인식됩니다.)
+- .gitignore 작성 도움 사이트
