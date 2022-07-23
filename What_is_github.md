@@ -43,3 +43,18 @@ $ git remote remove origin
   2. .git폴더와 동일한 위치에 생성.
   3. 제외 하고 싶은 파일은 반드시 git add 전에 .gitigore에 작성.(git add를 먼저 하게되면 버전 관리 대상이 되어 이후에 .gitignore에 작성해도 무시되지 않고 계속 버전 관리 대상으로 인식됩니다.)
 - .gitignore 작성 도움 사이트
+
+### 1-7 clon / pull
+- git clone
+  - 원격 저정자소의 커밋 내역을 가져와서 로컬 저장소를 생성하는 명령어(원격 저장소를 통째로 내컴퓨터에 복제할 수 있습니다.)
+  - ```bash
+    git clone <원격 저장소 주소>
+    ```
+  - git clone을 통해 생성된 로컬 저장소는 git init과 git remote add 가 이미 수행되어 있습니다.
+
+- git pull
+  - 원격 저장소의 변경 사항을 가져와 로컬 저장소를 업데이트하는 명령어 입니다.
+  - git pull <저장소 이름> <브랜치 이름>
+  - ```bash
+    git pull origin master
+    ```
