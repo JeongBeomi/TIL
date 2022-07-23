@@ -44,7 +44,7 @@ $ git remote remove origin
   3. 제외 하고 싶은 파일은 반드시 git add 전에 .gitigore에 작성.(git add를 먼저 하게되면 버전 관리 대상이 되어 이후에 .gitignore에 작성해도 무시되지 않고 계속 버전 관리 대상으로 인식됩니다.)
 - .gitignore 작성 도움 사이트
 
-### 1-7 clon / pull
+### 1-7 clone / pull
 - git clone
   - 원격 저정자소의 커밋 내역을 가져와서 로컬 저장소를 생성하는 명령어(원격 저장소를 통째로 내컴퓨터에 복제할 수 있습니다.)
   - ```bash
