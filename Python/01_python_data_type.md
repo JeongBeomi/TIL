@@ -1,3 +1,5 @@
+# 01_Python _data_type
+
 ## 1-1. Numeric_Type
 ---
 - 정수형(int)
