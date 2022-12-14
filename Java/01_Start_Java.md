@@ -2,10 +2,11 @@
 
 ### 0. Index
 1. [Programming & Java](#1-programming--java)
+2. [변수와 자료형](#2-변수와-자료형)
 
 ---
 
-### 1. Programming & Java
+## 1. Programming & Java
 - Java의 장점
   1. 플랫폼 종속되지 않는 프로그램을 개발하여 여러 플랫폼에서 실행 가능하다.
   ![image](https://user-images.githubusercontent.com/109258397/206990602-7959bd14-1739-4cbc-9273-33b96b1c4d3f.png)
@@ -24,3 +25,15 @@
 <br>
 
 - 구조 : project / package(패키지명 - 소문자 시작) / class(클래스명 - 소문자 시작) 
+
+- 실행파일의 저장 위치
+  - 프로젝트 폴더 내부 src 폴더와 bin폴더가 존재.
+  - src폴더 : 사용자 작성한 소스 코드(filename.java)가 있는 폴더. 
+  - bin폴더 : 컴파일된 실행 파일(filename.class)이 있는 폴더. 해당 파일이 앞서 배운 바이트 코드로 이루어진 자바 클래스 파일입니다.
+
+<br>
+
+---
+
+## 2. 변수와 자료형
+
