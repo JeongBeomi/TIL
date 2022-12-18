@@ -2,9 +2,11 @@
 
 ### 0. Index
 1. [Programming & Java](#1-programming--java)
-2. [변수와 자료형](#2-변수와-자료형)
+2. [변수와 자료형](#2-변수와-자료형)  
+
 
 ---
+
 
 ## 1. Programming & Java
 - Java의 장점
@@ -35,6 +37,8 @@
 
 ---
 
+<br>
+
 ## 2. 변수와 자료형
 
 - 컴퓨터에서 수 표현
@@ -47,3 +51,65 @@
     2. 제일 낮은 자리 1더하기 -> 11111011 = -5
     3. 00000101 + 11111010 = 100000000 최상위 비트는 버려짐 -> 0
 
+<br>
+
+- 변수
+  - 처음에 사용한 값과 다르게 변하는 값
+  - 해당 데이터를 저정하는 공간
+  - 어떤 데이터 형태(문자열, 정수 등)를 저장할 것인지 지정해야 한다. -> 변수의 '자료형'
+  ```java
+  int variable; // 정수형(int-자료형) 변수 variable을 선언
+  variable = 10; // 값 10을 variable변수에 대입
+  ```
+  - 변수 이름 제약 사항
+    - 변수 이름은 영문자(대문자, 소문자)나 숫자를 사용 가능, 특수 문자는 $, _ 만 사용 가능
+    - 변수이름은 숫자 시작 불가능
+    - 예약어(프로그래밍 언어에서 이미 약속되어 있는 단어) 사용 불가
+    - 카멜 케이스 (ex, numberOfStudent)
+
+<br>
+
+- 자료형
+  - 기본 자료형 종류
+  ![image](https://user-images.githubusercontent.com/109258397/208289425-750cda3a-079a-40c7-ac73-c1c15b5ec5b3.png)  
+
+  - 정수 자료형 (맨 앞 비트는 부호 비트)
+  ![image](https://user-images.githubusercontent.com/109258397/208289480-83db139a-bfcb-447b-80b6-f1142c8661df.png)  
+
+  - 자료형이 다른 정수의 덧셈
+    ```java
+      public class Variable1 {
+      public static void main(String[] args) {
+        short sVal = 10;
+        byte bVal = 20;
+        System.out.println(sVal + bVal);
+        }
+      }
+    ```
+    - 정수값 연산시 4바이트를 기본 단위로 사용하기 때문에, 연산전에 모두 int형으로 변환 또한 더한 결과 값도 int형으로 저장.
+    - 다른 자료형이 필요없는 것은 아니다. 1바이트 단위 조작하는경우, 다른언어와 호환을 위해서 필요하다.  
+ 
+ <br/> 
+
+- 문자 자료형
+  - 컴퓨터 내부에서 표현할 때는 0과 1의 조합
+  - 어떤 문자를 표현하기 위해 특정 정수값으로 정하고 약속
+  - 이런 코드 값을 모아 둔 것을 '문자 세트'라고 한다
+  - 문자 -> 정해진 코드 값 : 인코딩 / 코드 값 -> 문자 : 다코딩
+  ![image](https://user-images.githubusercontent.com/109258397/208290498-e22a1900-ce21-420b-8f6e-e2da15aee27f.png)  
+
+  ```java
+  	char ch1 = 'A';					// 문자형 자료형 char(2byte)
+		System.out.println(ch1);		// A : 문자 출력
+		System.out.println((int)ch1);	// 65 : 문자에 해당하는 정수 값(아스키 코드 값)
+
+		char ch2 = 66;					// 정수값 대입
+		System.out.println(ch2);		// B : 정수 값에 해당하는 문자 출력
+		
+		int ch3 = 67; 
+		System.out.println(ch3);		// 67 : 정수값 출력
+		System.out.println((char)ch1);	// C : 정수 값에 해당하는 문자 출력
+  ```
+  - 문자 -> ' ' / 문자열 -> " "
+  - 문자열 끝에는 항상 널(\0)로 끝난다. ("A" -> "A\0")
+  - 자바에서 문자열은 String클래스(추후 학습)
