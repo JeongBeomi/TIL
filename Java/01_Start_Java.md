@@ -144,3 +144,15 @@
   ```
     실행 결과 : 1001.000000000159
   ```
+
+- 논리 자료형
+  - boolean형 변수
+  - 1바이트로 값을 저정, true(참) / false(거짓) 두가지 값만 가진다.
+  ```java
+    public class Boolean {
+	  public static void main(String[] args) {
+		boolean isMarried = true;
+		System.out.println(isMarried);
+	  }
+  ```
+
