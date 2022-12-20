@@ -114,3 +114,33 @@
   - 문자열 끝에는 항상 널(\0)로 끝난다. ("A" -> "A\0")
   - 자바에서 문자열은 String클래스(추후 학습)
 
+- 실수 자료형
+  - 부동 소수점 방식을 사용.
+  - float(4byte) / double(8byte)
+  ![image](https://user-images.githubusercontent.com/109258397/208619182-37d26650-3f80-4a43-bd28-70674f43f951.png)
+  ```java
+  	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double dnum = 3.14;
+		float fnum = 3.14F;		// F-식별자
+		
+		System.out.println(dnum);
+		System.out.println(fnum);
+	  }
+  ```
+  - 부동 소수점 방식의 오류 : 지수로 표현되는 값이 0을 나타낼 수 없다 -> 오차 발생
+  ```java
+  	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double dnum = 1;
+		
+		for(int i = 0; i < 10000; i++) {
+			dnum = dnum + 0.1;
+		  }
+
+		System.out.println(dnum);
+	  }
+  ```
+  ```
+    실행 결과 : 1001.000000000159
+  ```
