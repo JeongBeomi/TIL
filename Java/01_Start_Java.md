@@ -156,3 +156,22 @@
 	  }
   ```
 
+- 자료형 없이 변수 선언(자바 10부터 생긴 문법)
+  - 지역 변수 자료형 추론, 컴파일러가 변수에 대입되는 자료를 보고 추측.
+  - 유의 사항
+    1. 한번 선언한 자료형 변수를 다른 자료형으로 사용 불가
+    2. 지역 변수만 가능({}내에서 사용하는 변수, 자세한 내용은 추후 학습)
+  ```java
+    public static void main(String[] args) {
+		var i = 10;			// int
+		var j = 10.0;		// double
+		var str = "Hello";	// String
+		
+		System.out.println(i);		// 10
+		System.out.println(j);		// 10.0
+		System.out.println(str);	// "Hello"
+		
+		str = "test";	// 다른 문자열은 대입 가능
+		// str = 3;  srt변수는 String형으로 먼저 사용, 정수 값을 넣을 수 없다.
+	  }
+  ```
