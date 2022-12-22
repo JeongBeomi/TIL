@@ -78,13 +78,12 @@
 
   - 자료형이 다른 정수의 덧셈
     ```java
-      public class Variable1 {
       public static void main(String[] args) {
         short sVal = 10;
         byte bVal = 20;
         System.out.println(sVal + bVal);
-        }
       }
+      
     ```
     - 정수값 연산시 4바이트를 기본 단위로 사용하기 때문에, 연산전에 모두 int형으로 변환 또한 더한 결과 값도 int형으로 저장.
     - 다른 자료형이 필요없는 것은 아니다. 1바이트 단위 조작하는경우, 다른언어와 호환을 위해서 필요하다.  
@@ -119,26 +118,24 @@
   - float(4byte) / double(8byte)
   ![image](https://user-images.githubusercontent.com/109258397/208619182-37d26650-3f80-4a43-bd28-70674f43f951.png)
   ```java
-  	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		double dnum = 3.14;
-		float fnum = 3.14F;		// F-식별자
-		
-		System.out.println(dnum);
-		System.out.println(fnum);
-	  }
+    public static void main(String[] args) {
+      double dnum = 3.14;
+      float fnum = 3.14F;		// F-식별자
+      
+      System.out.println(dnum);
+      System.out.println(fnum);
+	  7;}
   ```
   - 부동 소수점 방식의 오류 : 지수로 표현되는 값이 0을 나타낼 수 없다 -> 오차 발생
   ```java
   	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		double dnum = 1;
-		
-		for(int i = 0; i < 10000; i++) {
-			dnum = dnum + 0.1;
-		  }
+      double dnum = 1;
+      
+      for(int i = 0; i < 10000; i++) {
+        dnum = dnum + 0.1;
+        }
 
-		System.out.println(dnum);
+      System.out.println(dnum);
 	  }
   ```
   ```
@@ -149,10 +146,9 @@
   - boolean형 변수
   - 1바이트로 값을 저정, true(참) / false(거짓) 두가지 값만 가진다.
   ```java
-    public class Boolean {
-	  public static void main(String[] args) {
-		boolean isMarried = true;
-		System.out.println(isMarried);
+    public static void main(String[] args) {
+      boolean isMarried = true;
+      System.out.println(isMarried);
 	  }
   ```
 
@@ -163,15 +159,34 @@
     2. 지역 변수만 가능({}내에서 사용하는 변수, 자세한 내용은 추후 학습)
   ```java
     public static void main(String[] args) {
-		var i = 10;			// int
-		var j = 10.0;		// double
-		var str = "Hello";	// String
-		
-		System.out.println(i);		// 10
-		System.out.println(j);		// 10.0
-		System.out.println(str);	// "Hello"
-		
-		str = "test";	// 다른 문자열은 대입 가능
-		// str = 3;  srt변수는 String형으로 먼저 사용, 정수 값을 넣을 수 없다.
+      var i = 10;			// int
+      var j = 10.0;		// double
+      var str = "Hello";	// String
+      
+      System.out.println(i);		// 10
+      System.out.println(j);		// 10.0
+      System.out.println(str);	// "Hello"
+      
+      str = "test";	// 다른 문자열은 대입 가능
+      // str = 3;  srt변수는 String형으로 먼저 사용, 정수 값을 넣을 수 없다.
 	  }
   ```
+
+- 상수와 리터럴
+  - 변하지 않는 수
+  - 상수 이름은 대문자를 주로 사용, 여러단어 연결시 _ 기호 권장
+  - 상수 선언(final예약어)
+  ```java
+    public static void main(String[] args) {
+      final int MAX_NUM = 100;
+      final int MIN_NUM;
+      
+      MIN_NUM = 0;	// 사용하기전에 초기화. 초기화하지 않으면 오류 발생.
+      
+      System.out.println(MAX_NUM);
+      System.out.println(MIN_NUM);
+      
+      //MAX_NUM = 10000; 오류 발생 상수는 값을 변경할 수 없다.
+	  }
+  ```
+  - 리터럴
