@@ -13,9 +13,7 @@ def merge(left_arr, right_arr):
 
     merge_arr += left_arr[i:]
     merge_arr += right_arr[j:]
-
     return merge_arr
-    
 
 def merge_sort(arr):
     if len(arr) <= 1:
