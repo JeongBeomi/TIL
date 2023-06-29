@@ -2,7 +2,6 @@
 def selection_sort1(arr):
     for i in range(len(arr) - 1):
         min_index = i
-
         for j in range(i, len(arr)):
             if arr[min_index] > arr[j]:
                 min_index = j
@@ -22,7 +21,6 @@ def selection_sort2(idx):
     
     numbers[idx], numbers[min_idx] = numbers[min_idx], numbers[idx]
     selection_sort2(idx + 1)
-
 
 numbers = [5, 2, 7, 1, 3, 8, 9, 3, 5, 2]
 # selection_sort1(numbers)
