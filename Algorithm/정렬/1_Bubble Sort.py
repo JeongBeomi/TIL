@@ -10,4 +10,7 @@ def bubble_sort(a):
 
     return a
 
-print(bubble_sort(sample_list))  # [7, 12, 42, 55, 78]
+print(bubble_sort(sample_list))  
+
+# 출력
+# [7, 12, 42, 55, 78]
